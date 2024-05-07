@@ -26,12 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -42,8 +38,7 @@
               "RelativeToolTip": "Contracts\\Service\\IAuthorizationService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T21:01:08.592Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-07T21:01:08.592Z"
             },
             {
               "$type": "Document",
@@ -53,7 +48,7 @@
               "RelativeDocumentMoniker": "Application\\Services\\AuthorizationService.cs",
               "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Services\\AuthorizationService.cs",
               "RelativeToolTip": "Application\\Services\\AuthorizationService.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwGwAAAA2AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGwAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-07T20:53:51.751Z",
               "EditorCaption": ""
@@ -68,8 +63,7 @@
               "RelativeToolTip": "Application\\Services\\EmailService.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAowCoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T20:35:28.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-07T20:35:28.771Z"
             },
             {
               "$type": "Document",
@@ -81,8 +75,11 @@
               "RelativeToolTip": "API\\Controllers\\AccountController.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAIwDIAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T20:19:39.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-07T20:19:39.003Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
