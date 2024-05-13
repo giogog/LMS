@@ -37,6 +37,6 @@ public class UserRepository:IUserRepository
 
     public async Task<User> GetUser(Expression<Func<User, bool>> expression)
     {
-        return await _userManager.Users.FirstOrDefaultAsync(expression);
+        return await _userManager.Users.Include(u=>u.Person).FirstOrDefaultAsync(expression);
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "s3sYwn8cAAM//V5YAphPj0ygYinRq9MdGKJlNa3/hRa/wKVpUXT2pSODJ+eCu47sXfdqY1mnoiW01y7zVW3UWQ==",
+  "dgSpecHash": "E4iaRJ5hWZpAkCG0ug82X0kWWMqdiCPkps7cAdX4M9yOeois5CoQ7bxujW8VMw/Tm6dXyuu+WX3KYR+eLooCsA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -34,6 +34,7 @@
     "C:\\Users\\Geekster PC\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\7.1.2\\microsoft.identitymodel.protocols.openidconnect.7.1.2.nupkg.sha512",
     "C:\\Users\\Geekster PC\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.1.2\\microsoft.identitymodel.tokens.7.1.2.nupkg.sha512",
     "C:\\Users\\Geekster PC\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
+    "C:\\Users\\Geekster PC\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Geekster PC\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Geekster PC\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.1.2\\system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512",
     "C:\\Users\\Geekster PC\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"

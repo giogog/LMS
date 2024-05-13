@@ -149,3 +149,8 @@ C:\Users\Geekster PC\Desktop\Programming\Lms\API\obj\Debug\net8.0\refint\API.dll
 C:\Users\Geekster PC\Desktop\Programming\Lms\API\obj\Debug\net8.0\API.pdb
 C:\Users\Geekster PC\Desktop\Programming\Lms\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\Geekster PC\Desktop\Programming\Lms\API\obj\Debug\net8.0\ref\API.dll
+C:\Users\Geekster PC\Desktop\Programming\Lms\api\obj\Debug\net8.0\API.sourcelink.json
+C:\Users\Geekster PC\Desktop\Programming\Lms\API\bin\Debug\net8.0\MediatR.dll
+C:\Users\Geekster PC\Desktop\Programming\Lms\API\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\Geekster PC\Desktop\Programming\Lms\API\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Geekster PC\Desktop\Programming\Lms\API\bin\Debug\net8.0\Newtonsoft.Json.dll

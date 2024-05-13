@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(DomainDataContext))]
-    [Migration("20240507202718_Initial")]
+    [Migration("20240512224648_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -24,6 +24,68 @@ namespace API.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("Domain.Models.Lecture", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DayOfWeek")
+                        .HasColumnType("int");
+
+                    b.Property<TimeSpan>("EndTime")
+                        .HasColumnType("time");
+
+                    b.Property<int>("LectureCapacity")
+                        .HasColumnType("int");
+
+                    b.Property<TimeSpan>("StartTime")
+                        .HasColumnType("time");
+
+                    b.Property<int>("SubjectId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TeacherId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SubjectId");
+
+                    b.HasIndex("TeacherId");
+
+                    b.ToTable("Lecture", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Models.Person", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PersonType")
+                        .IsRequired()
+                        .HasMaxLength(8)
+                        .HasColumnType("nvarchar(8)");
+
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Person");
+
+                    b.HasDiscriminator<string>("PersonType").HasValue("Person");
+
+                    b.UseTphMappingStrategy();
+                });
 
             modelBuilder.Entity("Domain.Models.Role", b =>
                 {
@@ -52,7 +114,7 @@ namespace API.Migrations
                         .HasDatabaseName("RoleNameIndex")
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
-                    b.ToTable("AspNetRoles", (string)null);
+                    b.ToTable("Role", (string)null);
 
                     b.HasData(
                         new
@@ -67,6 +129,112 @@ namespace API.Migrations
                             Name = "User",
                             NormalizedName = "USER"
                         });
+                });
+
+            modelBuilder.Entity("Domain.Models.Seminar", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DayOfWeek")
+                        .HasColumnType("int");
+
+                    b.Property<TimeSpan>("EndTime")
+                        .HasColumnType("time");
+
+                    b.Property<int>("SeminarCapacity")
+                        .HasColumnType("int");
+
+                    b.Property<TimeSpan>("StartTime")
+                        .HasColumnType("time");
+
+                    b.Property<int>("SubjectId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TeacherId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SubjectId");
+
+                    b.HasIndex("TeacherId");
+
+                    b.ToTable("Seminar", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Models.StudentEnrollment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Grades")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Grades");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsPassed")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("LectureId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Mark")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
+                    b.Property<int?>("SeminarId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LectureId");
+
+                    b.HasIndex("SeminarId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("StudentEnrollment", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Models.Subject", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Credits")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Semester")
+                        .HasColumnType("int");
+
+                    b.Property<string>("gradeTypes")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("gradeTypes");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Subject", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.User", b =>
@@ -97,10 +265,6 @@ namespace API.Migrations
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -121,10 +285,6 @@ namespace API.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Surname")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -139,7 +299,7 @@ namespace API.Migrations
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
-                    b.ToTable("Users", (string)null);
+                    b.ToTable("User", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.UserRole", b =>
@@ -245,6 +405,103 @@ namespace API.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Domain.Models.Student", b =>
+                {
+                    b.HasBaseType("Domain.Models.Person");
+
+                    b.Property<int>("CurrentSemester")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<decimal?>("SemesterPay")
+                        .HasColumnType("decimal(18, 2)");
+
+                    b.Property<int>("TotalCredits")
+                        .HasColumnType("int");
+
+                    b.Property<int>("YearlyAvailableCredits")
+                        .HasColumnType("int");
+
+                    b.HasDiscriminator().HasValue("Student");
+                });
+
+            modelBuilder.Entity("Domain.Models.Teacher", b =>
+                {
+                    b.HasBaseType("Domain.Models.Person");
+
+                    b.HasDiscriminator().HasValue("Teacher");
+                });
+
+            modelBuilder.Entity("Domain.Models.Lecture", b =>
+                {
+                    b.HasOne("Domain.Models.Subject", "Subject")
+                        .WithMany("Lectures")
+                        .HasForeignKey("SubjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Models.Teacher", "Teacher")
+                        .WithMany("Lectures")
+                        .HasForeignKey("TeacherId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Subject");
+
+                    b.Navigation("Teacher");
+                });
+
+            modelBuilder.Entity("Domain.Models.Person", b =>
+                {
+                    b.HasOne("Domain.Models.User", null)
+                        .WithOne("Person")
+                        .HasForeignKey("Domain.Models.Person", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Domain.Models.Seminar", b =>
+                {
+                    b.HasOne("Domain.Models.Subject", "Subject")
+                        .WithMany("Seminars")
+                        .HasForeignKey("SubjectId");
+
+                    b.HasOne("Domain.Models.Teacher", "Teacher")
+                        .WithMany("Seminars")
+                        .HasForeignKey("TeacherId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Subject");
+
+                    b.Navigation("Teacher");
+                });
+
+            modelBuilder.Entity("Domain.Models.StudentEnrollment", b =>
+                {
+                    b.HasOne("Domain.Models.Lecture", "Lecture")
+                        .WithMany("StudentEnrollments")
+                        .HasForeignKey("LectureId");
+
+                    b.HasOne("Domain.Models.Seminar", "Seminar")
+                        .WithMany("StudentEnrollments")
+                        .HasForeignKey("SeminarId");
+
+                    b.HasOne("Domain.Models.Student", "Student")
+                        .WithMany("Enrollments")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Lecture");
+
+                    b.Navigation("Seminar");
+
+                    b.Navigation("Student");
+                });
+
             modelBuilder.Entity("Domain.Models.UserRole", b =>
                 {
                     b.HasOne("Domain.Models.Role", "Role")
@@ -300,14 +557,46 @@ namespace API.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Domain.Models.Lecture", b =>
+                {
+                    b.Navigation("StudentEnrollments");
+                });
+
             modelBuilder.Entity("Domain.Models.Role", b =>
                 {
                     b.Navigation("Users");
                 });
 
+            modelBuilder.Entity("Domain.Models.Seminar", b =>
+                {
+                    b.Navigation("StudentEnrollments");
+                });
+
+            modelBuilder.Entity("Domain.Models.Subject", b =>
+                {
+                    b.Navigation("Lectures");
+
+                    b.Navigation("Seminars");
+                });
+
             modelBuilder.Entity("Domain.Models.User", b =>
                 {
+                    b.Navigation("Person")
+                        .IsRequired();
+
                     b.Navigation("Roles");
+                });
+
+            modelBuilder.Entity("Domain.Models.Student", b =>
+                {
+                    b.Navigation("Enrollments");
+                });
+
+            modelBuilder.Entity("Domain.Models.Teacher", b =>
+                {
+                    b.Navigation("Lectures");
+
+                    b.Navigation("Seminars");
                 });
 #pragma warning restore 612, 618
         }

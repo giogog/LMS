@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\lms\\application\\services\\authorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\services\\authorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\lms\\application\\services\\domain\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\services\\domain\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EBAE4D7-74EF-4395-B9AF-0FDC834AA55A}|API\\API.csproj|c:\\users\\geekster pc\\desktop\\programming\\lms\\api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9EBAE4D7-74EF-4395-B9AF-0FDC834AA55A}|API\\API.csproj|solutionrelative:api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{090AC79E-60BC-4563-9DB3-343375B920F8}|Contracts\\Contracts.csproj|c:\\users\\geekster pc\\desktop\\programming\\lms\\contracts\\service\\student\\needimplementations\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{090AC79E-60BC-4563-9DB3-343375B920F8}|Contracts\\Contracts.csproj|solutionrelative:contracts\\service\\student\\needimplementations\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\lms\\application\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\lms\\application\\services\\domain\\subjectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\services\\domain\\subjectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{090AC79E-60BC-4563-9DB3-343375B920F8}|Contracts\\Contracts.csproj|c:\\users\\geekster pc\\desktop\\programming\\lms\\contracts\\service\\iauthorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{090AC79E-60BC-4563-9DB3-343375B920F8}|Contracts\\Contracts.csproj|solutionrelative:contracts\\service\\iauthorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86EEE25A-A4CF-4087-BAF5-B422B5309B8F}|Domain\\Domain.csproj|c:\\users\\geekster pc\\desktop\\programming\\lms\\domain\\models\\main\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86EEE25A-A4CF-4087-BAF5-B422B5309B8F}|Domain\\Domain.csproj|solutionrelative:domain\\models\\main\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\lms\\application\\queries\\paymentqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\queries\\paymentqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\lms\\application\\handlers\\paymentamounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\handlers\\paymentamounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\lms\\application\\queries\\studentqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\queries\\studentqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86EEE25A-A4CF-4087-BAF5-B422B5309B8F}|Domain\\Domain.csproj|c:\\users\\geekster pc\\desktop\\programming\\lms\\domain\\constants\\university.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86EEE25A-A4CF-4087-BAF5-B422B5309B8F}|Domain\\Domain.csproj|solutionrelative:domain\\constants\\university.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,60 +42,111 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IAuthorizationService.cs",
-              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Contracts\\Service\\IAuthorizationService.cs",
-              "RelativeDocumentMoniker": "Contracts\\Service\\IAuthorizationService.cs",
-              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Contracts\\Service\\IAuthorizationService.cs",
-              "RelativeToolTip": "Contracts\\Service\\IAuthorizationService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAArAAAA",
+              "DocumentIndex": 1,
+              "Title": "IPaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Contracts\\Service\\Student\\NeedImplementations\\IPaymentService.cs",
+              "RelativeDocumentMoniker": "Contracts\\Service\\Student\\NeedImplementations\\IPaymentService.cs",
+              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Contracts\\Service\\Student\\NeedImplementations\\IPaymentService.cs",
+              "RelativeToolTip": "Contracts\\Service\\Student\\NeedImplementations\\IPaymentService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T21:01:08.592Z"
+              "WhenOpened": "2024-05-13T22:38:00.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PaymentAmountHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Handlers\\PaymentAmountHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Handlers\\PaymentAmountHandler.cs",
+              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Handlers\\PaymentAmountHandler.cs",
+              "RelativeToolTip": "Application\\Handlers\\PaymentAmountHandler.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAxwCYAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T22:21:28.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PaymentQueries.cs",
+              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Queries\\PaymentQueries.cs",
+              "RelativeDocumentMoniker": "Application\\Queries\\PaymentQueries.cs",
+              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Queries\\PaymentQueries.cs",
+              "RelativeToolTip": "Application\\Queries\\PaymentQueries.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T22:17:06.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "University.cs",
+              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Domain\\Constants\\University.cs",
+              "RelativeDocumentMoniker": "Domain\\Constants\\University.cs",
+              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Domain\\Constants\\University.cs",
+              "RelativeToolTip": "Domain\\Constants\\University.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T21:58:22.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Domain\\Models\\Main\\Student.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\Main\\Student.cs",
+              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Domain\\Models\\Main\\Student.cs",
+              "RelativeToolTip": "Domain\\Models\\Main\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T21:55:56.754Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AuthorizationService.cs",
-              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Services\\AuthorizationService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\AuthorizationService.cs",
-              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Services\\AuthorizationService.cs",
-              "RelativeToolTip": "Application\\Services\\AuthorizationService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGwAAAA2AAAA",
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Services\\Domain\\PaymentService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\Domain\\PaymentService.cs",
+              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Services\\Domain\\PaymentService.cs",
+              "RelativeToolTip": "Application\\Services\\Domain\\PaymentService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T20:53:51.751Z",
+              "WhenOpened": "2024-05-13T21:50:19.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StudentQueries.cs",
+              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Queries\\StudentQueries.cs",
+              "RelativeDocumentMoniker": "Application\\Queries\\StudentQueries.cs",
+              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Queries\\StudentQueries.cs",
+              "RelativeToolTip": "Application\\Queries\\StudentQueries.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T21:34:44.318Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\EmailService.cs",
-              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Services\\EmailService.cs",
-              "RelativeToolTip": "Application\\Services\\EmailService.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAowCoAAAAIAAAA",
+              "Title": "SubjectService.cs",
+              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Services\\Domain\\SubjectService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\Domain\\SubjectService.cs",
+              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Services\\Domain\\SubjectService.cs",
+              "RelativeToolTip": "Application\\Services\\Domain\\SubjectService.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAAD8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T20:35:28.771Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\API\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\API\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "API\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAIwDIAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T20:19:39.003Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "WhenOpened": "2024-05-13T20:53:34.561Z",
+              "EditorCaption": ""
             }
           ]
         }

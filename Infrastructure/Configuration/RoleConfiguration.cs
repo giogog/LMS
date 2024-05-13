@@ -9,7 +9,7 @@ public class RoleConfiguration : IEntityTypeConfiguration<Role>
 {
     public void Configure(EntityTypeBuilder<Role> builder)
     {
-        builder.ToTable("AspNetRoles");
+        builder.ToTable(nameof(Role));
         builder.HasData(
             new List<Role>
             {

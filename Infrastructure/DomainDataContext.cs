@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace Infrastructure.DataConnection;
 
 
@@ -16,15 +15,15 @@ public class DomainDataContext : IdentityDbContext<User, Role, int
 
     }
 
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        builder.Entity<IdentityUserClaim<int>>().ToTable("UserClaims");
-        builder.Entity<UserRole>().ToTable("UserRoles");
-        builder.Entity<IdentityUserLogin<int>>().ToTable("UserLogins");
-        builder.Entity<IdentityRoleClaim<int>>().ToTable("RoleClaims");
-        builder.Entity<IdentityUserToken<int>>().ToTable("UserTokens");
-
         base.OnModelCreating(builder);
+
+        builder.Entity<Person>()
+            .HasDiscriminator<string>("PersonType")
+            .HasValue<Student>("Student")
+            .HasValue<Teacher>("Teacher");
 
 
 

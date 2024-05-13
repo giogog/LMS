@@ -1,4 +1,5 @@
 using API.Extensions;
+using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +13,7 @@ builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureServiceManager();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+//builder.Services.AddMediatR(typeof(Program).Assembly);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

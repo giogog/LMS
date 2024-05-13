@@ -67,5 +67,7 @@ namespace API.Extensions
 
         public static void ConfigureServiceManager(this IServiceCollection service) =>
             service.AddScoped<IServiceManager, ServiceManager>();
+
+        public static void ConfigureResultService(this IServiceCollection services) => services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
     }
 }

@@ -8,11 +8,14 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
-        builder.ToTable("Users");
+        builder.ToTable(nameof(User));
         builder.HasKey(e => e.Id);
         builder.Ignore(e => e.TwoFactorEnabled);
 
-
+        builder.HasOne(u => u.Person)
+            .WithOne()
+            .HasForeignKey<Person>(p => p.Id)
+            .IsRequired();
 
         builder.HasMany(UserRole => UserRole.Roles)
             .WithOne(user => user.User)
