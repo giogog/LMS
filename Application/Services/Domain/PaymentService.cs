@@ -23,7 +23,7 @@ public class PaymentService : IPaymentService
 
         var student = await _repositoryManager.StudentRepository.GetStudentById(User.Id);
 
-        if (student == null) return Result <decimal>.Failed("Student wasn't Found");
+        if (student == null) return Result<decimal>.Failed("Student wasn't Found");
 
         student.Balance += paymentDto.Ammount;
 
@@ -37,4 +37,6 @@ public class PaymentService : IPaymentService
             return Result<decimal>.Failed(ex.Message); 
         }
     }
+
+
 }

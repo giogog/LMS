@@ -13,11 +13,8 @@ public class Result<T>
 
         return new Result<T> { Message = massage, IsSuccess = true };
     }
-    public static Result<T> Success(T? data, string massage = "")
-    {
-
-        return new Result<T> { Data = data, Message = massage, IsSuccess = true };
-    }
+    public static Result<T> Success(T? data, string massage = "") => 
+        new Result<T> { Data = data, Message = massage, IsSuccess = true };
     public static Result<T> SuccesfullySaved<T>(int saved, T? data)
     {
         if (saved > 0) { 

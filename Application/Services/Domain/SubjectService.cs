@@ -29,6 +29,15 @@ public class SubjectService:ISubjectService
 
     }
 
+    public async Task<IEnumerable<Subject>> GetPassedSubjectsByStudentId(int studentId)
+    {
+        var studentEnrollments = await _repositoryManager.EnrollmentRepository
+            .GetByCondition(en => en.StudentId == studentId)
+            .Include(en => en.Lecture).ThenInclude(l=>l.Subject).ToArrayAsync();
+
+        return studentEnrollments.Select(en => en.Lecture.Subject);
+    }
+
     public async Task<IEnumerable<Subject>> GetSubjectsByStudentId(int studentId)
     {
         return await _repositoryManager.EnrollmentRepository

@@ -8,4 +8,5 @@ public interface IServiceManager
     IGradeService GradeService { get; }
     ILectureService LectureService { get; }
     ISeminarService SeminarService { get; }
-}
+    IAcademicService AcademicService { get; }
+} 

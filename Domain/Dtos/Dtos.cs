@@ -19,4 +19,7 @@ public record ScheduleDto();
 public record TimeDto(DayOfWeek DayOfWeek,TimeSpan StartTime,TimeSpan EndTime);
 public record LectureDto(int SubjectId, int TeacherId, int LectureCapacity, TimeDto timeDto);
 public record SeminarDto(int SubjectId, int TeacherId, int LectureCapacity, TimeDto timeDto);
-public record AcademicCardDto(IEnumerable<SubjectDto> subjects, double GPA, int FullCredits);
+public record EnrollmentsInCardDto(double FullGrade, char Mark);
+
+public record SubjectsInCardDto(string SubjectName);
+public record AcademicCardDto(Dictionary<string, EnrollmentsInCardDto> subjects, double GPA, int FullCredits);
