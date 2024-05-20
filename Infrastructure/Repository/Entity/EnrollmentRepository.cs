@@ -6,12 +6,9 @@ using System.Linq.Expressions;
 
 namespace Infrastructure.Repository;
 
-public class EnrollmentRepository : BaseRepository<StudentEnrollment>, IEnrollmentRepository
+public class EnrollmentRepository(DomainDataContext context) : BaseRepository<StudentEnrollment>(context), IEnrollmentRepository
 {
-    public EnrollmentRepository(DomainDataContext context) :base(context)
-    {
-        
-    }
+
     public async Task AddEnrollment(StudentEnrollment studentEnrollment) => Create(studentEnrollment);
 
     public async Task DeleteEnrollment(StudentEnrollment studentEnrollment) => Delete(studentEnrollment);

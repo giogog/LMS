@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\API\\API.csproj": {}
+    "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\api\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\API\\API.csproj": {
+    "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\API\\API.csproj",
+        "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\api\\API.csproj",
         "packagesPath": "C:\\Users\\Geekster PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\API\\obj\\",
+        "outputPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -333,6 +333,10 @@
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.25.0, )"
             }
           },
           "imports": [
@@ -415,6 +419,10 @@
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.25.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

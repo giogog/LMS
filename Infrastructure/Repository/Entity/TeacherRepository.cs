@@ -6,9 +6,8 @@ using System.Linq.Expressions;
 
 namespace Infrastructure.Repository;
 
-public class TeacherRepository : BaseRepository<Teacher>, ITeacherRepository
+public class TeacherRepository(DomainDataContext context) : BaseRepository<Teacher>(context), ITeacherRepository
 {
-    public TeacherRepository(DomainDataContext context) : base(context) { }
     public async Task AddTeacher(Teacher teacher) => Create(teacher);
 
     public async Task DeleteTeacher(Teacher teacher) => Delete(teacher);

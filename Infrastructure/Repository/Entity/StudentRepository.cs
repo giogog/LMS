@@ -6,10 +6,8 @@ using System.Linq.Expressions;
 
 namespace Infrastructure.Repository;
 
-public class StudentRepository : BaseRepository<Student>, IStudentRepository
+public class StudentRepository(DomainDataContext context) : BaseRepository<Student>(context), IStudentRepository
 {
-    public StudentRepository(DomainDataContext context) : base(context) { }
-
     public async Task AddStudent(Student student) => 
         Create(student);
 

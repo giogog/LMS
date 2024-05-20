@@ -11,7 +11,9 @@ public class Subject
     public int MaxSeminars { get; set; }
     public Semester Semester { get; set; }
     public string[] gradeTypes { get; set; }
+    public bool isActive {  get; set; }
+    public int FacultyId { get; set; }
+    public Faculty Faculty { get; set; }
     public ICollection<Lecture> Lectures { get; set; }
     public ICollection<Seminar>? Seminars { get; set; }
-
 }

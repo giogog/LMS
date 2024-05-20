@@ -17,11 +17,19 @@ public class SubjectConfiguration : IEntityTypeConfiguration<Subject>
         builder.HasMany(s => s.Seminars)
             .WithOne(s=>s.Subject)
             .HasForeignKey(s => s.SubjectId)
-            .IsRequired(false);
+            .IsRequired(false)
+            .OnDelete(DeleteBehavior.Restrict); 
 
         builder.HasMany(s => s.Lectures)
             .WithOne(l =>l.Subject)
             .HasForeignKey(s => s.SubjectId)
+            .IsRequired()
+            .OnDelete(DeleteBehavior.Restrict); 
+
+
+        builder.HasOne(s => s.Faculty)
+            .WithMany(f => f.Subjects)
+            .HasForeignKey(s => s.FacultyId)
             .IsRequired();
 
         builder.Property(p => p.gradeTypes)

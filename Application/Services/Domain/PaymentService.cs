@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
 using Contracts;
-using Domain.Constants;
 using Domain.Dtos;
 using Domain.Models;
+using Domain.Models;
+using MediatR;
 
 namespace Application.Services;
 
@@ -16,6 +17,24 @@ public class PaymentService : IPaymentService
         _repositoryManager = repositoryManager;
     }
 
+    public async Task<Result<decimal>> CalculatePaymentAmount(int studentId)
+    {
+        var student = await _repositoryManager.StudentRepository.GetStudentById(studentId);
+        var university = await _repositoryManager.UniversityRepository.GetUniversity();
+        if (student == null) return Result<decimal>.Failed("Student Not Found");
+        double grant = university.SemesterPayment * student.Grant;
+        double payAmount = 0;
+        //if (student.CurrentSemester > 8 && student.CurrentSemester < 11)
+        //{
+        //    if(student.YearlyAvailableCredits>0) payAmount = student.YearlyAvailableCredits/University.
+
+
+        //}
+
+
+
+        return Result<decimal>.Success(decimal.Parse(payAmount.ToString()));
+    }
 
     public async Task<Result<decimal>> PayForSemester(PaymentDto paymentDto)
     {
@@ -38,5 +57,19 @@ public class PaymentService : IPaymentService
         }
     }
 
+    public async Task<Result<decimal>> SetStudentStatus(int studentid, decimal calculatedPayment)
+    {
+        var student = await _repositoryManager.StudentRepository.GetStudentById(studentid);
+        if (student == null) return Result<decimal>.Failed("Student wasn't Found");
 
+        if(student.Balance < calculatedPayment)
+        {
+            student.IsActive = false;
+            return Result<decimal>.Success(student.Balance);
+        }
+
+        student.IsActive = true;
+        return Result<decimal>.Success(student.Balance);
+
+    }
 }

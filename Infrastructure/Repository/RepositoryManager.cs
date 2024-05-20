@@ -1,4 +1,5 @@
 ﻿using Contracts;
+using Contracts.Repository;
 using Domain.Models;
 using Infrastructure.DataConnection;
 using Microsoft.AspNetCore.Identity;
@@ -15,7 +16,9 @@ public class RepositoryManager : IRepositoryManager
     private readonly Lazy<ILectureRepository> _lectureRepository;
     private readonly Lazy<ISeminarRepository> _seminarRepository;
     private readonly Lazy<IEnrollmentRepository> _enrollmentRepository;
-    public RepositoryManager(DomainDataContext context,UserManager<User> userManager)
+    private readonly Lazy<IExtraSemesterRepository> _extraSemesterRepository;
+    private readonly Lazy<IUniversityRepository> _universityRepository;
+    public RepositoryManager(MongoDbContext mongoDBContext,DomainDataContext context,UserManager<User> userManager)
     {
         _context = context;
         _userRepository = new(() => new UserRepository(userManager));
@@ -25,7 +28,10 @@ public class RepositoryManager : IRepositoryManager
         _lectureRepository = new(() => new LectureRepository(context));
         _seminarRepository = new(() => new SeminarRepository(context));
         _enrollmentRepository = new(() => new EnrollmentRepository(context));
-        
+        _extraSemesterRepository = new(() => new ExtraSemesterRepository(mongoDBContext));
+        _universityRepository = new(() => new UniversityRepository(context));
+
+
     }
     public IUserRepository UserRepository => _userRepository.Value;
     public IStudentRepository StudentRepository => _studentRepository.Value;
@@ -34,5 +40,7 @@ public class RepositoryManager : IRepositoryManager
     public ISeminarRepository SeminarRepository => _seminarRepository.Value;
     public ILectureRepository LectureRepository => _lectureRepository.Value;
     public IEnrollmentRepository EnrollmentRepository => _enrollmentRepository.Value;
+    public IExtraSemesterRepository ExtraSemesterRepository => _extraSemesterRepository.Value;
+    public IUniversityRepository UniversityRepository => _universityRepository.Value;
     public async Task<int> SaveAsync() => await _context.SaveChangesAsync();
 }

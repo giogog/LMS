@@ -6,12 +6,8 @@ using System.Linq.Expressions;
 
 namespace Infrastructure.Repository;
 
-public class SeminarRepository:BaseRepository<Seminar>,ISeminarRepository
+public class SeminarRepository(DomainDataContext context) : BaseRepository<Seminar>(context), ISeminarRepository
 {
-    public SeminarRepository(DomainDataContext context):base(context)
-    {
-        
-    }
 
     public async Task AddSeminar(Seminar seminar) => Create(seminar);
 

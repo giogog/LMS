@@ -6,12 +6,8 @@ using System.Linq.Expressions;
 
 namespace Infrastructure.Repository;
 
-public class LectureRepository:BaseRepository<Lecture>,ILectureRepository
+public class LectureRepository(DomainDataContext context) : BaseRepository<Lecture>(context), ILectureRepository
 {
-    public LectureRepository(DomainDataContext context):base(context)
-    {
-        
-    }
 
     public async Task AddLecture(Lecture lecture) => Create(lecture);
 

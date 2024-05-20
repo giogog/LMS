@@ -5,5 +5,5 @@ using MediatR;
 namespace Application.Queries;
 
 public record GetStudentCardQuery(int studentId):IRequest<Result<AcademicCardDto>>;
-public record GetStudentSchedule(int studentId):IRequest<Result<ScheduleDto>>;
-public record GetStudentData(int studentId):IRequest<Result<StudentDto>>;
+public record GetStudentScheduleQuery(int studentId):IRequest<Result<IEnumerable<ScheduleDto>>>;
+public record GetStudentDataQuery(int studentId):IRequest<Result<StudentDto>>;

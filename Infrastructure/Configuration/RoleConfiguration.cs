@@ -15,6 +15,8 @@ public class RoleConfiguration : IEntityTypeConfiguration<Role>
             {
                 new Role { Id = -1, Name = "Admin", NormalizedName = "ADMIN" },
                 new Role { Id = -2, Name = "User", NormalizedName = "USER" },
+                new Role { Id = -3, Name = "Student", NormalizedName = "STUDENT" },
+                new Role { Id = -4, Name = "Teacher", NormalizedName = "TEACHER" },
             }
         );
 

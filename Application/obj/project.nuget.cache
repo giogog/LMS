@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9a5YXsISdjFa6IV47qBmsJugKlTJfKtA2EWSW/UB9JGu/llrqy84Yz6auGIZNNtz8wzsl5Dl5vO/YaeOyjVQEA==",
+  "dgSpecHash": "hdD+iBa/v5MPSR2eMuEPznrTaygv5m5UM71hygD3YPLtv9bfXH/yPt1LzeriljrI1+G4p5ABCKb66efmBVCJrw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Application.csproj",
   "expectedPackageFiles": [
@@ -37,8 +37,11 @@
     "C:\\Users\\Geekster PC\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\7.1.2\\microsoft.identitymodel.protocols.openidconnect.7.1.2.nupkg.sha512",
     "C:\\Users\\Geekster PC\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.1.2\\microsoft.identitymodel.tokens.7.1.2.nupkg.sha512",
     "C:\\Users\\Geekster PC\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
+    "C:\\Users\\Geekster PC\\.nuget\\packages\\mongodb.bson\\2.25.0\\mongodb.bson.2.25.0.nupkg.sha512",
     "C:\\Users\\Geekster PC\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Geekster PC\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.1.2\\system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512",
+    "C:\\Users\\Geekster PC\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\Geekster PC\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
     "C:\\Users\\Geekster PC\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
   ],
   "logs": []

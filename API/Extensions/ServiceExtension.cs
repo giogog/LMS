@@ -1,6 +1,8 @@
 ﻿using Application;
+using Application.Mapping;
 using Contracts;
 using Domain.Models;
+using Infrastructure;
 using Infrastructure.Auth;
 using Infrastructure.DataConnection;
 using Infrastructure.Email;
@@ -8,7 +10,9 @@ using Infrastructure.Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using MongoDB.Driver;
 using System.Text;
 
 namespace API.Extensions
@@ -24,6 +28,18 @@ namespace API.Extensions
                 }));
             return services;
         }
+
+        public static IServiceCollection ConfigureMongoDb(this IServiceCollection services, IConfiguration configuration) =>   
+            services.AddScoped<MongoDbContext>(sp =>
+            {
+                var client = new MongoClient(configuration.GetConnectionString("MongoDbConnection"));
+                return new MongoDbContext(client, configuration["MongoDb:DatabaseName"]); ;
+            });
+
+       
+        public static void ConfigureRepositoryManager(this IServiceCollection services) =>
+            services.AddScoped<IRepositoryManager, RepositoryManager>();
+
         public static IServiceCollection AddIdentityService(this IServiceCollection services, IConfiguration config)
         {
 
@@ -62,12 +78,10 @@ namespace API.Extensions
             return services;
         }
 
-        public static void ConfigureRepositoryManager(this IServiceCollection services) =>
-    services.AddScoped<IRepositoryManager, RepositoryManager>();
 
         public static void ConfigureServiceManager(this IServiceCollection service) =>
             service.AddScoped<IServiceManager, ServiceManager>();
 
-        public static void ConfigureResultService(this IServiceCollection services) => services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+        public static void ConfigureAutomapper(this IServiceCollection services) => services.AddAutoMapper(typeof(MappingProfile).Assembly);
     }
 }

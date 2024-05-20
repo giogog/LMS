@@ -38,12 +38,12 @@ public class AuthorizationService : IAuthorizationService
 
     public async Task<IdentityResult> Register(RegisterDto registerDto)
     {
-        if (registerDto.Username.Length != 11 || registerDto.Username.All(char.IsDigit))
+        if (registerDto.PersonalID.Length != 11 || registerDto.PersonalID.All(char.IsDigit))
             return IdentityResult.Failed(new IdentityError { Code = "WrongPersonalId", Description = "There is mistake in Personal Id" });
 
         var user = new User
         {
-            UserName = registerDto.Username,
+            UserName = registerDto.PersonalID,
             Email = registerDto.Email,
         };
 

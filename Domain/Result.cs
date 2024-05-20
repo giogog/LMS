@@ -10,8 +10,7 @@ public class Result<T>
 
     public static Result<T> Failed(string massage)
     {
-
-        return new Result<T> { Message = massage, IsSuccess = true };
+        return new Result<T> { Message = massage, IsSuccess = false };
     }
     public static Result<T> Success(T? data, string massage = "") => 
         new Result<T> { Data = data, Message = massage, IsSuccess = true };

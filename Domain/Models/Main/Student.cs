@@ -33,9 +33,11 @@ public class Student:Person
 
     [Range(0,1)]
     public double Grant {  get; set; }
+    [Column(TypeName = "decimal(18, 2)")]
+    [Range(0.01, 10000.00, ErrorMessage = "Price must be between $0.01 and $10,000.00")]
     public decimal Balance { get; set; } = 0;
-
     public bool IsActive { get; set; } = false;
-
+    public int FacultyId { get; set; }
+    public Faculty Faculty { get; set; }
     public ICollection<StudentEnrollment> Enrollments { get; set; }
 }

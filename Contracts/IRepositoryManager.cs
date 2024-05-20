@@ -1,4 +1,6 @@
-﻿namespace Contracts;
+﻿using Contracts.Repository;
+
+namespace Contracts;
 
 public interface IRepositoryManager
 {
@@ -9,6 +11,7 @@ public interface IRepositoryManager
     ILectureRepository LectureRepository { get; }
     ISeminarRepository SeminarRepository { get; }   
     IEnrollmentRepository EnrollmentRepository { get; }
-
+    IExtraSemesterRepository ExtraSemesterRepository { get; }
+    IUniversityRepository UniversityRepository { get; }
     Task<int> SaveAsync();
 }

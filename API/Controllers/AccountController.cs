@@ -5,16 +5,26 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
 
-[Route("api/[controller]")]
-[ApiController]
-public class AccountController : ControllerBase
+public class AccountController(IServiceManager _serviceManager) : ApiController(_serviceManager)
 {
-    private readonly IServiceManager _serviceManager;
 
+    [HttpPost("student-application")]
+    public async Task<ActionResult> StudentApplication(RegisterDto registerDto)
+    {
+        var registrationCheckUp = await _serviceManager.AuthorizationService.Register(registerDto);
 
-    public AccountController(IServiceManager serviceManager) => _serviceManager = serviceManager;
+        if (!registrationCheckUp.Succeeded)
+            return BadRequest(registrationCheckUp.Errors);
 
-    [HttpPost("register")]
+        var emailSent = await _serviceManager.EmailService.SendConfirmationMail(Url, registerDto.PersonalID);
+
+        if (!emailSent.IsSuccess)
+            return BadRequest(emailSent.ErrorMessage);
+
+        return Ok("Registration successful. Please check your email to confirm your account.");
+    }
+
+    [HttpPost("tutor-application")]
     public async Task<ActionResult> Register(RegisterDto registerDto)
     {
         var registrationCheckUp = await _serviceManager.AuthorizationService.Register(registerDto);
@@ -22,7 +32,7 @@ public class AccountController : ControllerBase
         if (!registrationCheckUp.Succeeded)
             return BadRequest(registrationCheckUp.Errors);
 
-        var emailSent = await _serviceManager.EmailService.SendConfirmationMail(Url, registerDto.Username);
+        var emailSent = await _serviceManager.EmailService.SendConfirmationMail(Url, registerDto.PersonalID);
 
         if (!emailSent.IsSuccess)
             return BadRequest(emailSent.ErrorMessage);

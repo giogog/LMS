@@ -6,10 +6,8 @@ using System.Linq.Expressions;
 
 namespace Infrastructure.Repository;
 
-public class SubjectRepository : BaseRepository<Subject>, ISubjectRepository
+public class SubjectRepository(DomainDataContext context) : BaseRepository<Subject>(context), ISubjectRepository
 {
-    public SubjectRepository(DomainDataContext context):base(context) { }
-
     public async Task AddSubject(Subject subject) => Create(subject);
 
     public async Task DeleteSubject(Subject subject) => Delete(subject);

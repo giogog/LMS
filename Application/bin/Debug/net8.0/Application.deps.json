@@ -297,6 +297,18 @@
           "System.Buffers": "4.5.0"
         }
       },
+      "MongoDB.Bson/2.25.0": {
+        "dependencies": {
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/MongoDB.Bson.dll": {
+            "assemblyVersion": "2.25.0.0",
+            "fileVersion": "2.25.0.0"
+          }
+        }
+      },
       "System.Buffers/4.5.0": {},
       "System.IdentityModel.Tokens.Jwt/7.1.2": {
         "dependencies": {
@@ -310,6 +322,8 @@
           }
         }
       },
+      "System.Memory/4.5.5": {},
+      "System.Runtime.CompilerServices.Unsafe/5.0.0": {},
       "System.Text.Encodings.Web/4.5.0": {},
       "Contracts/1.0.0": {
         "dependencies": {
@@ -322,7 +336,8 @@
       },
       "Domain/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.4"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.4",
+          "MongoDB.Bson": "2.25.0"
         },
         "runtime": {
           "Domain.dll": {}
@@ -567,6 +582,13 @@
       "path": "microsoft.net.http.headers/2.2.0",
       "hashPath": "microsoft.net.http.headers.2.2.0.nupkg.sha512"
     },
+    "MongoDB.Bson/2.25.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xQx/qtC2nu9oGiyNqAwfiDpUMweLi0nID677cyKykpwmj5AVMrnd//UwmcmuX95178DeY6rf7cjmA613TQXPiA==",
+      "path": "mongodb.bson/2.25.0",
+      "hashPath": "mongodb.bson.2.25.0.nupkg.sha512"
+    },
     "System.Buffers/4.5.0": {
       "type": "package",
       "serviceable": true,
@@ -580,6 +602,20 @@
       "sha512": "sha512-Thhbe1peAmtSBFaV/ohtykXiZSOkx59Da44hvtWfIMFofDA3M3LaVyjstACf2rKGn4dEDR2cUpRAZ0Xs/zB+7Q==",
       "path": "system.identitymodel.tokens.jwt/7.1.2",
       "hashPath": "system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512"
+    },
+    "System.Memory/4.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
+      "path": "system.memory/4.5.5",
+      "hashPath": "system.memory.4.5.5.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZD9TMpsmYJLrxbbmdvhwt9YEgG5WntEnZ/d1eH8JBX9LBp+Ju8BSBhUGbZMNVHHomWo2KVImJhTDl2hIgw/6MA==",
+      "path": "system.runtime.compilerservices.unsafe/5.0.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
     },
     "System.Text.Encodings.Web/4.5.0": {
       "type": "package",
